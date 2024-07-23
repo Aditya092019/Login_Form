@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+
+<div class="container">
+  <h2>Welcome to the Dashboard</h2>
+
+    {% if user %}
+        <p>user information</p>
+        <ul>
+            <li>Name : {{ user["name"] }}</li>
+            <li>Email : {{ user["email"] }}</li>
+        </ul>
+        <a href="/logout" class="btn btn-dark">Logout</a>
+    {% endif %}
+</div>
+
+{% endblock %}
